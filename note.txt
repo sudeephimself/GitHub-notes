@@ -158,6 +158,9 @@ Save and close the file
 At last it is running the following command for file run
 $ssh-add ~/.ssh/id_ed25519
 
+Enter the following command to view the SSH key
+$cat ~/.ssh/id_ed25519.pub
+
 
 
 
