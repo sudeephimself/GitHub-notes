@@ -148,5 +148,16 @@ Information in ssh agent    eval “$(ssh-agent -s)”
 If the ~/.ssh/config file does not exist, create the file with
 touch ~/.ssh/config
 open the file with vim
+Type the following commands
+
+Host *
+        AddKeysToAgent yes
+        IdentifyFile ~/.ssh/id_ed25519
+
+Save and close the file
+At last it is running the following command for file run
+$ssh-add ~/.ssh/id_ed25519
+
+
 
 
