@@ -1,0 +1,152 @@
+GIT 
+.gitignore  
+This file makes sure the contents in it are not being observed for changes.
+Put files folders and other stuffs you don’t want Git to track.
+
+Git change
+Staging area  -  git add command
+git commit -   Commit changes to memory
+git status:   get the current status.
+git branch   :      New Branch
+HEAD : The point where I am currently working.
+git switch :   go to other branch
+git restore : restore the previous version
+git checkout :  go to other branch: also go to any other branch using commit ID
+DETACHED HEAD
+
+git switch VS git checkout
+git merge: recombine code into main branch.
+Git revert: Undo something.
+git rebase : Move the base of the branch
+
+git ignore:    .gitignore
+git rm -r –cached . 		#Include a “ . ” at the end
+
+ 
+ 
+
+ 
+ 
+Changing History
+1.	Amending 
+ 
+
+.DS_Store    		# 
+.vscode/
+.authentication.js	# To store any tokens, API keys etc.
+node_modules	# Created by NPM on working on WEB projects
+notes/
+**/*-todo.md
+
+ 
+ 
+git rm -r –cached . 
+Include a “ . ” at the end
+
+
+Changing History
+
+Amending
+git commit -amend
+# git commit -am 'New commit message'
+# git commit -amend --no-edit
+
+Reset
+
+Rebasing
+ 
+
+git rebase <branch>/<commit>
+# git rebase –interactive <branch>/<commit>
+# git rebase -i HEAD~#
+# git rebase -i –root
+
+ 
+Branches
+
+Looking at branches
+git branch
+# * main
+
+Copying a branch
+	 git switch -c NAME
+	# git checkout -b NAME
+
+Switching between branches
+	git switch <NAME>
+
+
+Merging
+	git merge <branch>
+
+The merge command will merge the changes from one branch into the current branch, and it looks like this git merge <branch>. This command will change the merges from the branch I specify right here into the current branch so in our case, we have to switch back into the main branch and then execute this command.
+
+Deleting A Branch
+git branch –delete NAME
+# git branch -d NAME   ------     -d option as long as the branches are free of conflicts
+# git branch -D NAME   -------    -D forces git to ignore things and just delete the branch
+
+
+ 
+This sequence of doing things is what we call git flow. You create a new branch, that's usually a feature or a fix branch. You make changes to that branch. Then you merge that branch back to master, and then you delete the old branch. This is how developers work on real projects.
+
+
+
+Merge Conflicts
+
+
+
+ 
+git stash and git clean commands
+Stashing Code
+git stash
+# git stash list
+# git stash apply
+# git stash pop
+
+Git Clean
+git clean -n 	# dry run
+git clean -d 	#directories
+git clean -f 	# force
+ 
+GitHub
+ 
+
+ 
+git remote add NAME url
+# git remote remove NAME
+# git remote OLDNAME NAME
+# git remote -v
+ 
+git push -u origin main     # In case you want to push only one branch
+
+git remote add origin https://github.com/sudeephimself/small-project-test.git
+git push –all
+
+
+Pull Requests
+
+Managring Projects
+•	Contributors
+•	Issues
+•	Labels
+•	Milestones
+•	Projects
+
+
+Syncing Github
+Git clone
+Git fetch
+Git pull
+
+Creating SSH Key
+Create a SSH key from your linux terminal
+ssh-keygen -t ed25519 -C  your@email.com
+Put the email used to set to setup GitHub
+Information in ssh agent    eval “$(ssh-agent -s)”
+~/.ssh/config
+If the ~/.ssh/config file does not exist, create the file with
+touch ~/.ssh/config
+open the file with vim
+
+
